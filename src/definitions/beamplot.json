@@ -1,0 +1,92 @@
+{
+    "definition": "beamplot",
+    "messages": {
+        "set": {},
+        "get": {
+            "rx_data": {
+                "id": "9999",
+                "description": "sampling results",
+                "payload": [
+                    {
+                        "name": "opamp1",
+                        "type": "u8",
+                        "description": "opamp1 gain: 2,4,8, or 16"
+                    },
+                    {
+                        "name": "opamp2",
+                        "type": "u8",
+                        "description": "opamp2 gain: 2,4,8, or 16"
+                    },
+                    {
+                        "name": "adc_resolution",
+                        "type": "u8",
+                        "description": "adc resolution - 8 bit or 12 bit"
+                    },
+                    {
+                        "name": "adc_sample_time",
+                        "type": "u8",
+                        "description": "adc sampling time per conversion"
+                    },
+                    {
+                        "name": "fs",
+                        "type": "u32",
+                        "description": "sample frequency"
+                    },
+                    {
+                        "name": "data",
+                        "type": "vector",
+                        "vector": {
+                            "sizetype": "u16",
+                            "datatype": "u8",
+                            "size": "dynamic"
+                        },
+                        "description": "An array of return strength measurements taken at regular intervals across the scan region."
+                    }
+                ]
+            }
+        },
+        "control": {
+            "goto_bootloader": {
+                "id": "1100",
+                "description": "Send the device into the bootloader. This is useful for firmware updates.",
+                "payload": []
+            },
+            "take_samples": {
+                "id": "8888",
+                "description": "take samples with these parameters",
+                "payload": [
+                    {
+                        "name": "opamp1",
+                        "type": "u8",
+                        "description": "opamp1 gain: 2,4,8, or 16"
+                    },
+                    {
+                        "name": "opamp2",
+                        "type": "u8",
+                        "description": "opamp2 gain: 2,4,8, or 16"
+                    },
+                    {
+                        "name": "adc_resolution",
+                        "type": "u8",
+                        "description": "adc resolution - 8 bit or 12 bit"
+                    },
+                    {
+                        "name": "adc_sample_time",
+                        "type": "u8",
+                        "description": "adc sampling time per conversion"
+                    },
+                    {
+                        "name": "fs",
+                        "type": "u32",
+                        "description": "sample frequency"
+                    },
+                    {
+                        "name": "nsamples",
+                        "type": "u16",
+                        "description": "number of samples to report"
+                    }
+                ]
+            }
+        }
+    }
+}
