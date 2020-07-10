@@ -8,6 +8,16 @@
                 "description": "sampling results",
                 "payload": [
                     {
+                        "name": "tx_frequency",
+                        "type": "u32",
+                        "description": "transmit ping frequency"
+                    },
+                    {
+                        "name": "tx_periods",
+                        "type": "u16",
+                        "description": "transmit ping frequency"
+                    },
+                    {
                         "name": "opamp1",
                         "type": "u8",
                         "description": "opamp1 gain: 2,4,8, or 16"
@@ -55,6 +65,16 @@
                 "id": "8888",
                 "description": "take samples with these parameters",
                 "payload": [
+                    {
+                        "name": "tx_frequency",
+                        "type": "u32",
+                        "description": "transmit ping frequency"
+                    },
+                    {
+                        "name": "tx_periods",
+                        "type": "u16",
+                        "description": "transmit ping frequency"
+                    },
                     {
                         "name": "opamp1",
                         "type": "u8",
